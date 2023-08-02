@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://3l43vr88vw3t"]
+
+[ext_resource type="PackedScene" uid="uid://26xd4ee2hrj1" path="res://addons/asset_browser/src/settings/components/text_edit/text_edit.tscn" id="1_54uj1"]
+[ext_resource type="PackedScene" uid="uid://dofuvwpwk28i6" path="res://addons/asset_browser/src/settings/components/close_button/close_button.tscn" id="1_l2t3q"]
+[ext_resource type="PackedScene" uid="uid://b1ptpen7ekba6" path="res://addons/asset_browser/src/settings/components/int_edit/int_edit.tscn" id="2_h8yl5"]
+[ext_resource type="PackedScene" uid="uid://uewwxig8kbfw" path="res://addons/asset_browser/src/settings/components/ie_list/ie_list.tscn" id="2_x0uq5"]
+
+[node name="MainSetup" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CloseButton" parent="." instance=ExtResource("1_l2t3q")]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Go back"
+
+[node name="Borders" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 45
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Borders"]
+layout_mode = 2
+
+[node name="Components" type="VBoxContainer" parent="Borders/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextEdit" parent="Borders/ScrollContainer/Components" instance=ExtResource("1_54uj1")]
+layout_mode = 2
+key_var = "caption"
+
+[node name="IntEdit" parent="Borders/ScrollContainer/Components" instance=ExtResource("2_h8yl5")]
+layout_mode = 2
+key_var = "columns"
+
+[node name="Include" parent="Borders/ScrollContainer/Components" instance=ExtResource("2_x0uq5")]
+layout_mode = 2
+key = "include"
+
+[node name="Exclude" parent="Borders/ScrollContainer/Components" instance=ExtResource("2_x0uq5")]
+layout_mode = 2
+key = "exclude"

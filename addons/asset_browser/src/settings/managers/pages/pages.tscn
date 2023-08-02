@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfvga1frqp6b0"]
+
+[ext_resource type="Script" path="res://addons/asset_browser/src/settings/managers/pages/pages.gd" id="1_auecl"]
+
+[node name="PagesManager" type="Node"]
+script = ExtResource("1_auecl")

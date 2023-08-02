@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqhlf3xb6yqqq"]
+
+[ext_resource type="Script" path="res://addons/asset_browser/src/settings/components/page_list/page_list.gd" id="1_n8wfv"]
+[ext_resource type="PackedScene" uid="uid://48wa60ahkyov" path="res://addons/asset_browser/src/settings/components/list_items/list_items.tscn" id="2_67c6a"]
+
+[node name="PageList" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_n8wfv")
+
+[node name="Ctrls" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TitleEnter" type="LineEdit" parent="Ctrls"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="Add" type="Button" parent="Ctrls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Add"
+
+[node name="Edit" type="Button" parent="Ctrls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Edit"
+
+[node name="Remove" type="Button" parent="Ctrls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Remove"
+
+[node name="ListItems" parent="." instance=ExtResource("2_67c6a")]
+layout_mode = 2
+size_flags_vertical = 3

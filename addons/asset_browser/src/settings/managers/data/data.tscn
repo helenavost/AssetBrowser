@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj7qthskkdcur"]
+
+[ext_resource type="Script" path="res://addons/asset_browser/src/settings/managers/data/data.gd" id="1_qyc7l"]
+
+[node name="DataManager" type="Node"]
+script = ExtResource("1_qyc7l")

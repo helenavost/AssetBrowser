@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwgcsht8hb5u8"]
+
+[ext_resource type="Script" path="res://addons/asset_browser/src/settings/templates/main/main.gd" id="1_rjgy4"]
+[ext_resource type="PackedScene" uid="uid://cqhlf3xb6yqqq" path="res://addons/asset_browser/src/settings/components/page_list/page_list.tscn" id="2_0gh05"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rjgy4")
+
+[node name="PageList" parent="." instance=ExtResource("2_0gh05")]
+layout_mode = 1
+key = "folders"
+template_file = "res://addons/asset_browser/src/settings/templates/main_setup/main_setup.tscn"
