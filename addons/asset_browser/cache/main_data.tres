@@ -1,6 +1,0 @@
-[gd_resource type="Resource" script_class="ABPSettingsPage" load_steps=2 format=3 uid="uid://ry1s2k74nioa"]
-
-[ext_resource type="Script" path="res://addons/asset_browser/src/resources/settings_page.gd" id="1_gc8af"]
-
-[resource]
-script = ExtResource("1_gc8af")
